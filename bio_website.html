@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(45deg, #0a0a0f 0%, #1a1a24 25%, #0f0f18 50%, #1a1a24 75%, #0a0a0f 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #e4e4e4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(18, 18, 28, 0.6);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #8b8b9a 0%, #b0b0c0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #b4b4b4;
+            margin-bottom: 35px;
+            font-size: 1.1em;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #a0a0b0;
+            border-bottom: 1px solid rgba(160, 160, 176, 0.2);
+            padding-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px) saturate(160%);
+            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            padding: 15px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #e4e4e4;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .link-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .link-icon {
+            font-size: 1.3em;
+        }
+
+        .link-text {
+            flex: 1;
+        }
+
+        .link-label {
+            font-size: 0.85em;
+            color: #a0a0a0;
+            display: block;
+        }
+
+        .orientation-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: #e4e4e4;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .special-link {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .special-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Обо мне ✨</h1>
+        <div class="subtitle">Добро пожаловать на мою страницу</div>
+
+        <div class="section">
+            <div class="section-title">💜 Личная информация</div>
+            <p style="margin-bottom: 15px;">Ориентация:</p>
+            <div class="orientation-badge">Би 🏳️‍🌈 (он/она)</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">👥 Друзья</div>
+            <div class="links-grid">
+                <a href="https://t.me/swaaaaaaaaaaaaaaaaaga" class="link-card special-link" target="_blank">
+                    <span class="link-icon">❤️</span>
+                    <span class="link-text">
+                        <span class="link-label">Мой парень</span>
+                        <span style="font-size: 0.85em; word-break: break-all;">@swaaaaaaaaaaaaaaaaaga</span>
+                    </span>
+                </a>
+                <a href="https://t.me/flutterbea" class="link-card" target="_blank">
+                    <span class="link-icon">🦋</span>
+                    <span class="link-text">@flutterbea</span>
+                </a>
+                <a href="https://t.me/otravilsia_cheburekom" class="link-card" target="_blank">
+                    <span class="link-icon">🥟</span>
+                    <span class="link-text">@otravilsia_cheburekom</span>
+                </a>
+                <a href="https://t.me/paceonel" class="link-card special-link" target="_blank">
+                    <span class="link-icon">🛡️</span>
+                    <span class="link-text">
+                        <span class="link-label">Мой деф</span>
+                        @paceonel
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🚀 Мои проекты</div>
+            <div class="links-grid">
+                <a href="https://t.me/philosophy0q" class="link-card" target="_blank">
+                    <span class="link-icon">🧠</span>
+                    <span class="link-text">@philosophy0q</span>
+                </a>
+                <a href="https://t.me/philosomusic" class="link-card" target="_blank">
+                    <span class="link-icon">🎵</span>
+                    <span class="link-text">@philosomusic</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📬 Связаться со мной</div>
+            <div class="links-grid">
+                <a href="https://t.me/trinchek" class="link-card" target="_blank">
+                    <span class="link-icon">✈️</span>
+                    <span class="link-text">@trinchek</span>
+                </a>
+                <a href="mailto:fonkchel@gmail.com" class="link-card" target="_blank">
+                    <span class="link-icon">📧</span>
+                    <span class="link-text">fonkchel@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
