@@ -1,0 +1,2 @@
+# trinchekbio
+my bio
